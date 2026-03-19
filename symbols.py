@@ -18,7 +18,13 @@ class SymbolInfo:
     symbol: str
     status: str
     quote: str
-    raw_data: Dict[str, Any]  # Добавлено для доступа к лимитам в main.py
+    raw_data: Dict[str, Any]
+
+
+@dataclass(frozen=True)
+class ProductsCatalog:
+    root_data: Dict[str, Any]
+    symbols: List[SymbolInfo]
 
 
 class PhemexSymbols:
@@ -30,7 +36,8 @@ class PhemexSymbols:
 
     BASE_URL = "https://api.phemex.com"
 
-    def __init__(self, timeout_sec: float = 20.0, retries: int = 3):
+    def __init__(self, timeout_sec: float = 20.0, retries: int = 3, base_url: str | None = None):
+        self.BASE_URL = (base_url or self.BASE_URL).rstrip("/")
         self._timeout = aiohttp.ClientTimeout(total=float(timeout_sec))
         self._retries = int(retries)
         self._session: aiohttp.ClientSession | None = None
@@ -64,9 +71,11 @@ class PhemexSymbols:
                     text = await resp.text()
                     if resp.status != 200:
                         raise RuntimeError(f"HTTP {resp.status}: {text}")
-                    data = await resp.json()
+                    data = await resp.json(content_type=None)
                     if not isinstance(data, dict):
                         raise RuntimeError(f"Bad JSON root: {type(data)}")
+                    if int(data.get("code", 0)) != 0:
+                        raise RuntimeError(f"API error code={data.get('code')} msg={data.get('msg')}")
                     return data
             except Exception as e:
                 last_err = e
@@ -107,12 +116,11 @@ class PhemexSymbols:
         status = str(obj.get("status") or obj.get("state") or obj.get("symbolStatus") or "Listed")
         return SymbolInfo(symbol=sym_s.upper(), status=status, quote=q, raw_data=obj)
 
-    async def get_all(self, quote: str = "USDT", only_active: bool = True) -> List[SymbolInfo]:
+    async def get_catalog(self, quote: str = "USDT", only_active: bool = True) -> ProductsCatalog:
         data = await self._get_json("/public/products")
-
         root = data.get("data") if isinstance(data, dict) else None
         if not isinstance(root, dict):
-            return []
+            return ProductsCatalog(root_data={}, symbols=[])
 
         arr = root.get("perpProductsV2") or root.get("perpProducts") or []
         out: List[SymbolInfo] = []
@@ -124,9 +132,9 @@ class PhemexSymbols:
                         out.append(si)
 
         if not out:
-            for _, v in root.items():
-                if isinstance(v, list):
-                    for it in v:
+            for _, value in root.items():
+                if isinstance(value, list):
+                    for it in value:
                         if isinstance(it, dict):
                             si = self._parse_perp(it, quote=quote)
                             if si and (not only_active or self._is_active_status(si.status)):
@@ -134,8 +142,12 @@ class PhemexSymbols:
 
         seen = set()
         uniq: List[SymbolInfo] = []
-        for s in out:
-            if s.symbol not in seen:
-                seen.add(s.symbol)
-                uniq.append(s)
-        return uniq
+        for symbol in out:
+            if symbol.symbol not in seen:
+                seen.add(symbol.symbol)
+                uniq.append(symbol)
+        return ProductsCatalog(root_data=root, symbols=uniq)
+
+    async def get_all(self, quote: str = "USDT", only_active: bool = True) -> List[SymbolInfo]:
+        catalog = await self.get_catalog(quote=quote, only_active=only_active)
+        return catalog.symbols

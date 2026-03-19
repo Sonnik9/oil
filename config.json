@@ -1,6 +1,12 @@
 {
-    "api_url": "https://api.phemex.com",
-    "check_interval": 60,
-    "oi_threshold_percent": 95.0,
-    "signal_cooldown_sec": 300
+  "api_url": "https://api.phemex.com",
+  "ws_url": "wss://ws.phemex.com",
+  "check_interval": 60,
+  "oi_threshold_percent": 95.0,
+  "signal_cooldown_sec": 300,
+  "ws_ping_interval_sec": 20,
+  "ws_message_timeout_sec": 35,
+  "ws_reconnect_delay_sec": 3,
+  "ws_backoff_max_sec": 30,
+  "symbol_batch_size": 50
 }

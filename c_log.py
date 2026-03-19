@@ -1,8 +1,9 @@
 from __future__ import annotations
 
 import inspect
+import json
 import logging
-import os
+import sys
 from datetime import datetime
 from functools import wraps
 from logging.handlers import RotatingFileHandler
@@ -31,42 +32,54 @@ class UnifiedLogger:
         log_path = Path(log_dir) / f"{name}.log"
         approx_line_len = 350
         max_bytes = max(100_000, approx_line_len * max_lines)
+        formatter = _TzFormatter("%(asctime)s | %(levelname)s | %(context)s | %(message)s", "%Y-%m-%d %H:%M:%S")
 
         base_logger = logging.getLogger(name)
         base_logger.setLevel(logging.DEBUG)
         base_logger.propagate = False
 
         if not base_logger.handlers:
-            handler = RotatingFileHandler(log_path, maxBytes=max_bytes, backupCount=2, encoding="utf-8")
-            handler.setFormatter(_TzFormatter("%(asctime)s | %(levelname)s | %(context)s | %(message)s", "%Y-%m-%d %H:%M:%S"))
-            base_logger.addHandler(handler)
+            file_handler = RotatingFileHandler(log_path, maxBytes=max_bytes, backupCount=2, encoding="utf-8")
+            file_handler.setLevel(logging.DEBUG)
+            file_handler.setFormatter(formatter)
+            base_logger.addHandler(file_handler)
+
+            stream_handler = logging.StreamHandler(sys.stdout)
+            stream_handler.setLevel(logging.DEBUG)
+            stream_handler.setFormatter(formatter)
+            base_logger.addHandler(stream_handler)
 
         self._logger = logging.LoggerAdapter(base_logger, extra={"context": context or name})
 
+    def _emit(self, level: int, enabled: bool, msg: str, *args, **kwargs) -> None:
+        if enabled:
+            self._logger.log(level, msg, *args, **kwargs)
+
     def debug(self, msg: str, *args, **kwargs) -> None:
-        if LOG_DEBUG:
-            print(msg)
-            self._logger.debug(msg, *args, **kwargs)
+        self._emit(logging.DEBUG, LOG_DEBUG, msg, *args, **kwargs)
 
     def info(self, msg: str, *args, **kwargs) -> None:
-        if LOG_INFO:
-            print(msg)
-            self._logger.info(msg, *args, **kwargs)
+        self._emit(logging.INFO, LOG_INFO, msg, *args, **kwargs)
 
     def warning(self, msg: str, *args, **kwargs) -> None:
-        if LOG_WARNING:
-            print(msg)
-            self._logger.warning(msg, *args, **kwargs)
+        self._emit(logging.WARNING, LOG_WARNING, msg, *args, **kwargs)
 
     def error(self, msg: str, *args, **kwargs) -> None:
-        if LOG_ERROR:
-            print(msg)
-            self._logger.error(msg, *args, **kwargs)
+        self._emit(logging.ERROR, LOG_ERROR, msg, *args, **kwargs)
+
+    def critical(self, msg: str, *args, **kwargs) -> None:
+        self._emit(logging.CRITICAL, LOG_ERROR, msg, *args, **kwargs)
 
     def exception(self, msg: str, *args, **kwargs) -> None:
         if LOG_ERROR:
-            print(msg)
             self._logger.exception(msg, *args, **kwargs)
+
+    def log_json(self, level: str, title: str, payload: Any) -> None:
+        try:
+            rendered = json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True)
+        except (TypeError, ValueError):
+            rendered = repr(payload)
+        self._emit(getattr(logging, level.upper(), logging.INFO), True, "%s\n%s", title, rendered)
 
     def total_exception_decor(self, func, context: Optional[Any] = None):
         if getattr(func, "_is_wrapped", False):
