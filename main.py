@@ -101,13 +101,14 @@ class PhemexRESTScreener:
         while True:
             start_t = time.time()
             try:
-                data = await self._get_json("/md/ticker/24hr/all")
+                # ВНИМАНИЕ: Используем v2 для USDT-margined фьючерсов
+                data = await self._get_json("/md/v2/ticker/24hr/all")
                 
-                # ЖЕСТКИЙ ДАМП ПЕРВОГО ОТВЕТА
+                # ЖЕСТКИЙ ДАМП ПЕРВОГО ОТВЕТА (чтобы убедиться, что тикеры теперь LINKUSDT, а не cLINKUSD)
                 if not self._first_ticker_dumped:
                     with open("phemex_raw_tickers.json", "w", encoding="utf-8") as f:
                         json.dump(data, f, indent=4)
-                    logger.info("✅ СЫРОЙ ОТВЕТ С ТИКЕРАМИ СОХРАНЕН В phemex_raw_tickers.json!")
+                    logger.info("✅ СЫРОЙ ОТВЕТ С ТИКЕРАМИ СОХРАНЕН В phemex_raw_tickers.json! Проверь тикеры!")
                     self._first_ticker_dumped = True
                 
                 payload = data.get("result") or data.get("data") or []
@@ -119,6 +120,7 @@ class PhemexRESTScreener:
                     if not sym or sym not in self.oi_limits:
                         continue
                         
+                    # Берем openInterestRv (Real Value) для точного совпадения с лимитами
                     oi_str = item.get("openInterestRv") or item.get("openInterest") or item.get("openInterestValue") or 0
                     current_oi = float(oi_str)
                     limit = self.oi_limits.get(sym, 0)
@@ -138,6 +140,51 @@ class PhemexRESTScreener:
             elapsed = time.time() - start_t
             sleep_time = max(1.0, self.check_interval - elapsed)
             await asyncio.sleep(sleep_time)
+
+    # async def poll_tickers_loop(self):
+    #     logger.info(f"=== Запуск REST-скринера | Порог: {self.threshold}% | Интервал: {self.check_interval}с ===")
+        
+    #     while True:
+    #         start_t = time.time()
+    #         try:
+    #             # data = await self._get_json("/md/ticker/24hr/all")
+    #             data = await self._get_json("/md/v2/ticker/24hr/all")
+                
+    #             # ЖЕСТКИЙ ДАМП ПЕРВОГО ОТВЕТА
+    #             if not self._first_ticker_dumped:
+    #                 with open("phemex_raw_tickers.json", "w", encoding="utf-8") as f:
+    #                     json.dump(data, f, indent=4)
+    #                 logger.info("✅ СЫРОЙ ОТВЕТ С ТИКЕРАМИ СОХРАНЕН В phemex_raw_tickers.json!")
+    #                 self._first_ticker_dumped = True
+                
+    #             payload = data.get("result") or data.get("data") or []
+    #             items = payload if isinstance(payload, list) else [payload]
+                
+    #             found_signals = 0
+    #             for item in items:
+    #                 sym = item.get("symbol")
+    #                 if not sym or sym not in self.oi_limits:
+    #                     continue
+                        
+    #                 oi_str = item.get("openInterestRv") or item.get("openInterest") or item.get("openInterestValue") or 0
+    #                 current_oi = float(oi_str)
+    #                 limit = self.oi_limits.get(sym, 0)
+                    
+    #                 if limit > 0 and current_oi > 0:
+    #                     usage = (current_oi / limit) * 100
+    #                     if usage >= self.threshold:
+    #                         self._trigger_signal(sym, current_oi, limit, usage)
+    #                         found_signals += 1
+                            
+    #             # ПУЛЬС: Всегда выводим результат опроса
+    #             logger.info(f"Опрос завершен (тиков: {len(items)}). Сигналов: {found_signals}. Спим...")
+                
+    #         except Exception as e:
+    #             logger.error(f"Ошибка массового опроса тикеров: {e}")
+                
+    #         elapsed = time.time() - start_t
+    #         sleep_time = max(1.0, self.check_interval - elapsed)
+    #         await asyncio.sleep(sleep_time)
 
     def _trigger_signal(self, symbol: str, current_oi: float, limit: float, usage: float):
         self._cleanup_cache()
