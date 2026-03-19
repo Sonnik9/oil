@@ -1,0 +1,5 @@
+{
+    "api_url": "https://api.phemex.com",
+    "check_interval": 30,
+    "oi_threshold_percent": 95.0
+}
