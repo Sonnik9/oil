@@ -1,5 +1,5 @@
 # ============================================================
-# FILE: API/PHEMEX/symbol.py
+# FILE: symbol.py
 # ROLE: Phemex USDT Perpetual (Futures) symbols via REST.
 # NOTE: Standalone module (no package imports).
 # ============================================================
