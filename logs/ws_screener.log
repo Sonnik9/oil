@@ -1,138 +1,320 @@
-2026-03-19 18:45:38 | INFO | Screener | === Запуск Screener Phemex | Порог OI: 95.0% | Cooldown: 300с ===
-2026-03-19 18:45:38 | INFO | Screener | Запуск REST-воркера для обновления лимитов (интервал: 60с)
-2026-03-19 18:45:38 | INFO | Screener | [DEBUG REST] Пример данных по символу BTCUSDT: {"perpProductSubType": "Normal", "symbol": "BTCUSDT", "code": 41541, "type": "PerpetualV2", "displaySymbol": "BTC / USDT", "indexSymbol": ".BTCUSDT", "markSymbol": ".MBTCUSDT", "fundingRateSymbol": ".BTCUSDTFR", "fundingRate8hSymbol": ".BTCUSDTFR8H", "contractUnderlyingAssets": "BTC", "settleCurrency": "USDT", "quoteCurrency": "USDT", "tickSize": "0.1", "priceScale": 0, "ratioScale": 0, "pricePrecision": 1, "baseCurrency": "BTC", "description": "BTC/USDT perpetual contracts are priced on the .BTCUSDT Index. Each contract is worth 1 BTC. Funding fees are paid and received every 8 hours at UTC time: 00:00, 08:00 and 16:00.", "status": "Listed", "tipOrderQty": 0, "listTime": 1668225600000, "majorSymbol": true, "defaultLeverage": "-10", "fundingInterval": 28800, "maxLeverage": 100, "leverageMargin": 1002, "maxOI": -1.0, "maxOrderQtyRq": "1000", "maxPriceRp": "500000", "minOrderValueRv": "1", "minPriceRp": "1000.0", "qtyPrecision": 3, "qtyStepSize": "0.001", "tipOrderQtyRq": "200", "maxOpenPosLeverage": 100.0}
-2026-03-19 18:45:38 | INFO | Screener | Найдено 519 символов.
-2026-03-19 18:45:39 | INFO | Screener | Создано 18 WS чанков для подписки на 519 символов.
-2026-03-19 18:45:39 | INFO | Screener | [WS Chunk 3] Соединение установлено. Символов в батче: 30
-2026-03-19 18:45:40 | INFO | Screener | [WS Chunk 11] Соединение установлено. Символов в батче: 30
-2026-03-19 18:45:40 | INFO | Screener | [WS Chunk 5] Соединение установлено. Символов в батче: 30
-2026-03-19 18:45:40 | INFO | Screener | [WS Chunk 10] Соединение установлено. Символов в батче: 30
-2026-03-19 18:45:40 | INFO | Screener | [WS Chunk 13] Соединение установлено. Символов в батче: 30
-2026-03-19 18:45:40 | INFO | Screener | [WS Chunk 8] Соединение установлено. Символов в батче: 30
-2026-03-19 18:45:40 | INFO | Screener | [WS Chunk 6] Соединение установлено. Символов в батче: 30
-2026-03-19 18:45:40 | INFO | Screener | [WS Chunk 14] Соединение установлено. Символов в батче: 30
-2026-03-19 18:45:40 | INFO | Screener | [WS Chunk 16] Соединение установлено. Символов в батче: 30
-2026-03-19 18:45:40 | INFO | Screener | [WS Chunk 12] Соединение установлено. Символов в батче: 30
-2026-03-19 18:45:40 | INFO | Screener | [WS Chunk 1] Соединение установлено. Символов в батче: 30
-2026-03-19 18:45:40 | INFO | Screener | [WS Chunk 18] Соединение установлено. Символов в батче: 9
-2026-03-19 18:45:40 | INFO | Screener | [WS Chunk 17] Соединение установлено. Символов в батче: 30
-2026-03-19 18:45:40 | INFO | Screener | [WS Chunk 2] Соединение установлено. Символов в батче: 30
-2026-03-19 18:45:40 | INFO | Screener | [WS Chunk 9] Соединение установлено. Символов в батче: 30
-2026-03-19 18:45:40 | ERROR | Screener | [WS Chunk 5] Ошибка биржи: {'code': 6001, 'message': 'invalid argument'}
-2026-03-19 18:45:40 | ERROR | Screener | [WS Chunk 8] Ошибка биржи: {'code': 6001, 'message': 'invalid argument'}
-2026-03-19 18:45:40 | INFO | Screener | [WS Chunk 7] Соединение установлено. Символов в батче: 30
-2026-03-19 18:45:40 | INFO | Screener | [WS Chunk 4] Соединение установлено. Символов в батче: 30
-2026-03-19 18:45:40 | INFO | Screener | [WS Chunk 15] Соединение установлено. Символов в батче: 30
-2026-03-19 18:45:40 | ERROR | Screener | [WS Chunk 6] Ошибка биржи: {'code': 6001, 'message': 'invalid argument'}
-2026-03-19 18:45:40 | ERROR | Screener | [WS Chunk 2] Ошибка биржи: {'code': 6001, 'message': 'invalid argument'}
-2026-03-19 18:45:40 | ERROR | Screener | [WS Chunk 9] Ошибка биржи: {'code': 6001, 'message': 'invalid argument'}
-2026-03-19 18:46:14 | INFO | Screener | Скринер остановлен.
-2026-03-19 18:46:21 | INFO | Screener | === Запуск Screener Phemex | Порог OI: 45.0% | Cooldown: 300с ===
-2026-03-19 18:46:21 | INFO | Screener | Запуск REST-воркера для обновления лимитов (интервал: 60с)
-2026-03-19 18:46:21 | INFO | Screener | [DEBUG REST] Пример данных по символу BTCUSDT: {"perpProductSubType": "Normal", "symbol": "BTCUSDT", "code": 41541, "type": "PerpetualV2", "displaySymbol": "BTC / USDT", "indexSymbol": ".BTCUSDT", "markSymbol": ".MBTCUSDT", "fundingRateSymbol": ".BTCUSDTFR", "fundingRate8hSymbol": ".BTCUSDTFR8H", "contractUnderlyingAssets": "BTC", "settleCurrency": "USDT", "quoteCurrency": "USDT", "tickSize": "0.1", "priceScale": 0, "ratioScale": 0, "pricePrecision": 1, "baseCurrency": "BTC", "description": "BTC/USDT perpetual contracts are priced on the .BTCUSDT Index. Each contract is worth 1 BTC. Funding fees are paid and received every 8 hours at UTC time: 00:00, 08:00 and 16:00.", "status": "Listed", "tipOrderQty": 0, "listTime": 1668225600000, "majorSymbol": true, "defaultLeverage": "-10", "fundingInterval": 28800, "maxLeverage": 100, "leverageMargin": 1002, "maxOI": -1.0, "maxOrderQtyRq": "1000", "maxPriceRp": "500000", "minOrderValueRv": "1", "minPriceRp": "1000.0", "qtyPrecision": 3, "qtyStepSize": "0.001", "tipOrderQtyRq": "200", "maxOpenPosLeverage": 100.0}
-2026-03-19 18:46:21 | INFO | Screener | Найдено 519 символов.
-2026-03-19 18:46:22 | INFO | Screener | Создано 18 WS чанков для подписки на 519 символов.
-2026-03-19 18:46:23 | INFO | Screener | [WS Chunk 2] Соединение установлено. Символов в батче: 30
-2026-03-19 18:46:23 | INFO | Screener | [WS Chunk 3] Соединение установлено. Символов в батче: 30
-2026-03-19 18:46:23 | INFO | Screener | [WS Chunk 8] Соединение установлено. Символов в батче: 30
-2026-03-19 18:46:23 | INFO | Screener | [WS Chunk 7] Соединение установлено. Символов в батче: 30
-2026-03-19 18:46:23 | INFO | Screener | [WS Chunk 11] Соединение установлено. Символов в батче: 30
-2026-03-19 18:46:23 | INFO | Screener | [WS Chunk 10] Соединение установлено. Символов в батче: 30
-2026-03-19 18:46:23 | INFO | Screener | [WS Chunk 12] Соединение установлено. Символов в батче: 30
-2026-03-19 18:46:23 | INFO | Screener | [WS Chunk 18] Соединение установлено. Символов в батче: 9
-2026-03-19 18:46:23 | INFO | Screener | [WS Chunk 6] Соединение установлено. Символов в батче: 30
-2026-03-19 18:46:23 | INFO | Screener | [WS Chunk 13] Соединение установлено. Символов в батче: 30
-2026-03-19 18:46:23 | INFO | Screener | [WS Chunk 1] Соединение установлено. Символов в батче: 30
-2026-03-19 18:46:23 | INFO | Screener | [WS Chunk 9] Соединение установлено. Символов в батче: 30
-2026-03-19 18:46:23 | INFO | Screener | [WS Chunk 15] Соединение установлено. Символов в батче: 30
-2026-03-19 18:46:23 | INFO | Screener | [WS Chunk 5] Соединение установлено. Символов в батче: 30
-2026-03-19 18:46:23 | INFO | Screener | [WS Chunk 14] Соединение установлено. Символов в батче: 30
-2026-03-19 18:46:23 | ERROR | Screener | [WS Chunk 2] Ошибка биржи: {'code': 6001, 'message': 'invalid argument'}
-2026-03-19 18:46:23 | ERROR | Screener | [WS Chunk 9] Ошибка биржи: {'code': 6001, 'message': 'invalid argument'}
-2026-03-19 18:46:23 | INFO | Screener | [WS Chunk 4] Соединение установлено. Символов в батче: 30
-2026-03-19 18:46:23 | ERROR | Screener | [WS Chunk 5] Ошибка биржи: {'code': 6001, 'message': 'invalid argument'}
-2026-03-19 18:46:23 | INFO | Screener | [WS Chunk 16] Соединение установлено. Символов в батче: 30
-2026-03-19 18:46:24 | ERROR | Screener | [WS Chunk 8] Ошибка биржи: {'code': 6001, 'message': 'invalid argument'}
-2026-03-19 18:46:24 | ERROR | Screener | [WS Chunk 6] Ошибка биржи: {'code': 6001, 'message': 'invalid argument'}
-2026-03-19 18:46:24 | INFO | Screener | [WS Chunk 17] Соединение установлено. Символов в батче: 30
-2026-03-19 18:46:39 | INFO | Screener | Скринер остановлен.
-2026-03-19 18:56:51 | INFO | Screener | === Запуск Screener Phemex | Порог OI: 45.0% | Cooldown: 300с ===
-2026-03-19 18:56:51 | INFO | Screener | Запуск REST-воркера для обновления лимитов (интервал: 60с)
-2026-03-19 18:56:53 | INFO | Screener | ✅ Лимиты записаны в phemex_limits.json | Сырые данные в phemex_raw_rest.json
-2026-03-19 18:56:53 | INFO | Screener | Найдено 519 символов.
-2026-03-19 18:56:54 | INFO | Screener | Создано 18 WS чанков для подписки на 519 символов.
-2026-03-19 18:56:55 | INFO | Screener | [WS Chunk 2] Соединение установлено. Подписка ПОШТУЧНО...
-2026-03-19 18:56:55 | INFO | Screener | [WS Chunk 3] Соединение установлено. Подписка ПОШТУЧНО...
-2026-03-19 18:56:55 | INFO | Screener | [WS Chunk 5] Соединение установлено. Подписка ПОШТУЧНО...
-2026-03-19 18:56:55 | INFO | Screener | [WS Chunk 12] Соединение установлено. Подписка ПОШТУЧНО...
-2026-03-19 18:56:55 | INFO | Screener | [WS Chunk 15] Соединение установлено. Подписка ПОШТУЧНО...
-2026-03-19 18:56:55 | INFO | Screener | [WS Chunk 6] Соединение установлено. Подписка ПОШТУЧНО...
-2026-03-19 18:56:55 | INFO | Screener | [WS Chunk 4] Соединение установлено. Подписка ПОШТУЧНО...
-2026-03-19 18:56:55 | INFO | Screener | [WS Chunk 11] Соединение установлено. Подписка ПОШТУЧНО...
-2026-03-19 18:56:55 | INFO | Screener | [WS Chunk 18] Соединение установлено. Подписка ПОШТУЧНО...
-2026-03-19 18:56:55 | INFO | Screener | [WS Chunk 17] Соединение установлено. Подписка ПОШТУЧНО...
-2026-03-19 18:56:55 | INFO | Screener | [WS Chunk 10] Соединение установлено. Подписка ПОШТУЧНО...
-2026-03-19 18:56:55 | INFO | Screener | [WS Chunk 7] Соединение установлено. Подписка ПОШТУЧНО...
-2026-03-19 18:56:55 | INFO | Screener | [WS Chunk 1] Соединение установлено. Подписка ПОШТУЧНО...
-2026-03-19 18:56:55 | INFO | Screener | [WS Chunk 14] Соединение установлено. Подписка ПОШТУЧНО...
-2026-03-19 18:56:55 | INFO | Screener | [WS Chunk 16] Соединение установлено. Подписка ПОШТУЧНО...
-2026-03-19 18:56:55 | INFO | Screener | [WS Chunk 9] Соединение установлено. Подписка ПОШТУЧНО...
-2026-03-19 18:56:55 | INFO | Screener | [WS Chunk 13] Соединение установлено. Подписка ПОШТУЧНО...
-2026-03-19 18:56:55 | INFO | Screener | [WS Chunk 8] Соединение установлено. Подписка ПОШТУЧНО...
-2026-03-19 18:56:56 | ERROR | Screener | [WS Chunk 5] Ошибка биржи: {'code': 6001, 'message': 'invalid argument'}
-2026-03-19 18:56:56 | ERROR | Screener | [WS Chunk 5] Ошибка биржи: {'code': 6001, 'message': 'invalid argument'}
-2026-03-19 18:56:56 | ERROR | Screener | [WS Chunk 5] Ошибка биржи: {'code': 6001, 'message': 'invalid argument'}
-2026-03-19 18:56:56 | ERROR | Screener | [WS Chunk 6] Ошибка биржи: {'code': 6001, 'message': 'invalid argument'}
-2026-03-19 18:56:56 | ERROR | Screener | [WS Chunk 6] Ошибка биржи: {'code': 6001, 'message': 'invalid argument'}
-2026-03-19 18:56:56 | ERROR | Screener | [WS Chunk 6] Ошибка биржи: {'code': 6001, 'message': 'invalid argument'}
-2026-03-19 18:56:56 | ERROR | Screener | [WS Chunk 9] Ошибка биржи: {'code': 6001, 'message': 'invalid argument'}
-2026-03-19 18:56:56 | ERROR | Screener | [WS Chunk 2] Ошибка биржи: {'code': 6001, 'message': 'invalid argument'}
-2026-03-19 18:56:56 | ERROR | Screener | [WS Chunk 8] Ошибка биржи: {'code': 6001, 'message': 'invalid argument'}
-2026-03-19 18:56:56 | ERROR | Screener | [WS Chunk 8] Ошибка биржи: {'code': 6001, 'message': 'invalid argument'}
-2026-03-19 18:56:56 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 93700, "fundingRate": 10000, "high": 97400, "indexPrice": 93791, "low": 93400, "markPrice": 93727, "open": 95300, "openInterest": 2547828, "predFundingRate": 10000, "symbol": "cAVAXUSD", "turnover": 19766258905683, "volume": 1890977}, "timestamp": 1773939408581449404}
-2026-03-19 18:56:56 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 89320, "fundingRate": 5586, "high": 93360, "indexPrice": 89311, "low": 88880, "markPrice": 89319, "open": 91480, "openInterest": 5590554, "predFundingRate": 5586, "symbol": "cLINKUSD", "turnover": 178379018673975, "volume": 16283154}, "timestamp": 1773939413612840863}
-2026-03-19 18:56:56 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 9428, "fundingRate": 10000, "high": 9947, "indexPrice": 9423, "low": 9381, "markPrice": 9423, "open": 9758, "openInterest": 1330232, "predFundingRate": 10000, "symbol": "cSUIUSD", "turnover": 1989196791905071, "volume": 19279269}, "timestamp": 1773939413612929342}
-2026-03-19 18:56:56 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 2641, "fundingRate": 10000, "high": 2765, "indexPrice": 2644, "low": 2629, "markPrice": 2641, "open": 2708, "openInterest": 5848573, "predFundingRate": 10000, "symbol": "cADAUSD", "turnover": 1920382012052370, "volume": 5191898}, "timestamp": 1773939413612946972}
-2026-03-19 18:56:56 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 14269, "fundingRate": 10000, "high": 14821, "indexPrice": 14270, "low": 14232, "markPrice": 14269, "open": 14441, "openInterest": 15440120, "predFundingRate": 10000, "symbol": "cXRPUSD", "turnover": 3457691274187370, "volume": 50416389}, "timestamp": 1773939413612968234}
-2026-03-19 18:56:56 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 875800, "fundingRate": 10000, "high": 913200, "indexPrice": 876100, "low": 869900, "markPrice": 875800, "open": 889800, "openInterest": 3076475, "predFundingRate": 10000, "symbol": "cSOLUSD", "turnover": 81011475308747, "volume": 72554597}, "timestamp": 1773939413612983676}
-2026-03-19 18:56:56 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 21126300, "fundingRate": -45692, "high": 22327100, "indexPrice": 21139251, "low": 20977600, "markPrice": 21126300, "open": 21828900, "openInterest": 124585235, "predFundingRate": -45692, "symbol": "cETHUSD", "turnover": 3526515350383, "volume": 76905040}, "timestamp": 1773939413613035246}
-2026-03-19 18:56:56 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 693845000, "fundingRate": -272, "high": 719577000, "indexPrice": 694321929, "low": 687197000, "markPrice": 693917875, "open": 712786000, "openInterest": 1324973282, "predFundingRate": -272, "symbol": "BTCUSD", "turnover": 1075913314468, "volume": 759647978}, "timestamp": 1773939413613063570}
-2026-03-19 18:56:57 | ERROR | Screener | [WS Chunk 8] Ошибка биржи: {'code': 6001, 'message': 'invalid argument'}
-2026-03-19 18:56:57 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 89320, "fundingRate": 5586, "high": 93360, "indexPrice": 89311, "low": 88880, "markPrice": 89319, "open": 91480, "openInterest": 5590554, "predFundingRate": 5586, "symbol": "cLINKUSD", "turnover": 178379018673975, "volume": 16283154}, "timestamp": 1773939414619069646}
-2026-03-19 18:56:57 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 14269, "fundingRate": 10000, "high": 14821, "indexPrice": 14270, "low": 14232, "markPrice": 14269, "open": 14441, "openInterest": 15440120, "predFundingRate": 10000, "symbol": "cXRPUSD", "turnover": 3457691274187370, "volume": 50416389}, "timestamp": 1773939414619151411}
-2026-03-19 18:56:57 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 875900, "fundingRate": 10000, "high": 913200, "indexPrice": 876200, "low": 869900, "markPrice": 875900, "open": 889800, "openInterest": 3076475, "predFundingRate": 10000, "symbol": "cSOLUSD", "turnover": 81011583768616, "volume": 72554692}, "timestamp": 1773939414619178229}
-2026-03-19 18:56:57 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 21126300, "fundingRate": -45692, "high": 22327100, "indexPrice": 21141333, "low": 20977600, "markPrice": 21126300, "open": 21828900, "openInterest": 124585235, "predFundingRate": -45692, "symbol": "cETHUSD", "turnover": 3526515350383, "volume": 76905040}, "timestamp": 1773939414619242548}
-2026-03-19 18:56:58 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 89310, "fundingRate": 5586, "high": 93360, "indexPrice": 89311, "low": 88880, "markPrice": 89310, "open": 91480, "openInterest": 5590554, "predFundingRate": 5586, "symbol": "cLINKUSD", "turnover": 178383990121740, "volume": 16283598}, "timestamp": 1773939415625560388}
-2026-03-19 18:56:58 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 9428, "fundingRate": 10000, "high": 9947, "indexPrice": 9423, "low": 9381, "markPrice": 9424, "open": 9758, "openInterest": 1330232, "predFundingRate": 10000, "symbol": "cSUIUSD", "turnover": 1989196791905071, "volume": 19279269}, "timestamp": 1773939415625610863}
-2026-03-19 18:56:58 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 2641, "fundingRate": 10000, "high": 2765, "indexPrice": 2644, "low": 2629, "markPrice": 2641, "open": 2708, "openInterest": 5848573, "predFundingRate": 10000, "symbol": "cADAUSD", "turnover": 1920382012052370, "volume": 5191898}, "timestamp": 1773939415625633092}
-2026-03-19 18:56:58 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 14269, "fundingRate": 10000, "high": 14821, "indexPrice": 14271, "low": 14232, "markPrice": 14269, "open": 14441, "openInterest": 15440120, "predFundingRate": 10000, "symbol": "cXRPUSD", "turnover": 3457691274187370, "volume": 50416389}, "timestamp": 1773939415625653161}
-2026-03-19 18:56:58 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 21126300, "fundingRate": -45692, "high": 22327100, "indexPrice": 21141326, "low": 20977600, "markPrice": 21126300, "open": 21828900, "openInterest": 124585235, "predFundingRate": -45692, "symbol": "cETHUSD", "turnover": 3526515350383, "volume": 76905040}, "timestamp": 1773939415625716825}
-2026-03-19 18:56:58 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 693845000, "fundingRate": -272, "high": 719577000, "indexPrice": 694329491, "low": 687197000, "markPrice": 693925437, "open": 712786000, "openInterest": 1324973282, "predFundingRate": -272, "symbol": "BTCUSD", "turnover": 1075913314468, "volume": 759647978}, "timestamp": 1773939415625750566}
-2026-03-19 18:56:59 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 14269, "fundingRate": 10000, "high": 14821, "indexPrice": 14270, "low": 14232, "markPrice": 14269, "open": 14441, "openInterest": 15440120, "predFundingRate": 10000, "symbol": "cXRPUSD", "turnover": 3457691274187370, "volume": 50416389}, "timestamp": 1773939416632365050}
-2026-03-19 18:56:59 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 875900, "fundingRate": 10000, "high": 913200, "indexPrice": 876300, "low": 869900, "markPrice": 875900, "open": 889800, "openInterest": 3076475, "predFundingRate": 10000, "symbol": "cSOLUSD", "turnover": 81011583768616, "volume": 72554692}, "timestamp": 1773939416632471412}
-2026-03-19 18:56:59 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 21126300, "fundingRate": -45692, "high": 22327100, "indexPrice": 21141365, "low": 20977600, "markPrice": 21126300, "open": 21828900, "openInterest": 124585235, "predFundingRate": -45692, "symbol": "cETHUSD", "turnover": 3526515350383, "volume": 76905040}, "timestamp": 1773939416632535442}
-2026-03-19 18:57:00 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 89320, "fundingRate": 5586, "high": 93360, "indexPrice": 89312, "low": 88880, "markPrice": 89320, "open": 91480, "openInterest": 5590554, "predFundingRate": 5586, "symbol": "cLINKUSD", "turnover": 178384549906782, "volume": 16283648}, "timestamp": 1773939417638301093}
-2026-03-19 18:57:00 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 9428, "fundingRate": 10000, "high": 9947, "indexPrice": 9423, "low": 9381, "markPrice": 9424, "open": 9758, "openInterest": 1330232, "predFundingRate": 10000, "symbol": "cSUIUSD", "turnover": 1989196791905071, "volume": 19279269}, "timestamp": 1773939417638355029}
-2026-03-19 18:57:00 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 2641, "fundingRate": 10000, "high": 2765, "indexPrice": 2644, "low": 2629, "markPrice": 2641, "open": 2708, "openInterest": 5848573, "predFundingRate": 10000, "symbol": "cADAUSD", "turnover": 1920382012052370, "volume": 5191898}, "timestamp": 1773939417638380803}
-2026-03-19 18:57:00 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 14275, "fundingRate": 10000, "high": 14821, "indexPrice": 14272, "low": 14232, "markPrice": 14273, "open": 14441, "openInterest": 15440120, "predFundingRate": 10000, "symbol": "cXRPUSD", "turnover": 3457717754047264, "volume": 50416767}, "timestamp": 1773939417638402409}
-2026-03-19 18:57:00 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 875900, "fundingRate": 10000, "high": 913200, "indexPrice": 876400, "low": 869900, "markPrice": 875900, "open": 889800, "openInterest": 3076475, "predFundingRate": 10000, "symbol": "cSOLUSD", "turnover": 81011994774438, "volume": 72555052}, "timestamp": 1773939417638423252}
-2026-03-19 18:57:00 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 21126300, "fundingRate": -45692, "high": 22327100, "indexPrice": 21144048, "low": 20977600, "markPrice": 21126300, "open": 21828900, "openInterest": 124585235, "predFundingRate": -45692, "symbol": "cETHUSD", "turnover": 3526515350383, "volume": 76905040}, "timestamp": 1773939417638498657}
-2026-03-19 18:57:00 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 693845000, "fundingRate": -272, "high": 719577000, "indexPrice": 694330329, "low": 687197000, "markPrice": 693926275, "open": 712786000, "openInterest": 1324973282, "predFundingRate": -272, "symbol": "BTCUSD", "turnover": 1075913314468, "volume": 759647978}, "timestamp": 1773939417638534972}
-2026-03-19 18:57:01 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 89330, "fundingRate": 5586, "high": 93360, "indexPrice": 89312, "low": 88880, "markPrice": 89320, "open": 91480, "openInterest": 5590092, "predFundingRate": 5586, "symbol": "cLINKUSD", "turnover": 178387023879691, "volume": 16283869}, "timestamp": 1773939418645444120}
-2026-03-19 18:57:01 | INFO | Screener | [WS RAW SPAM] {"market24h": {"close": 9428, "fundingRate": 10000, "high": 9947, "indexPrice": 9423, "low": 9381, "markPrice": 9424, "open": 9758, "openInterest": 1330444, "predFundingRate": 10000, "symbol": "cSUIUSD", "turnover": 1989382833483347, "volume": 19281023}, "timestamp": 1773939418645527439}
-2026-03-19 18:57:53 | INFO | Screener | ✅ Лимиты записаны в phemex_limits.json | Сырые данные в phemex_raw_rest.json
-2026-03-19 18:58:08 | INFO | Screener | Скринер остановлен.
-2026-03-19 19:10:18 | INFO | Screener | === Запуск Screener Phemex | Порог OI: 45.0% | Cooldown: 300с ===
-2026-03-19 19:10:18 | INFO | Screener | Запуск REST-воркера для обновления лимитов (интервал: 60с)
-2026-03-19 19:10:18 | INFO | Screener | Обновлены лимиты для 519 активных символов.
-2026-03-19 19:10:19 | INFO | Screener | Лимиты загружены. Запуск глобального WebSocket потока.
-2026-03-19 19:10:19 | INFO | Screener | Глобальное WS соединение установлено. Запрашиваем поток всего рынка...
-2026-03-19 19:11:18 | INFO | Screener | Обновлены лимиты для 519 активных символов.
-2026-03-19 19:12:19 | INFO | Screener | Обновлены лимиты для 519 активных символов.
-2026-03-19 19:13:08 | INFO | Screener | Скринер остановлен.
-2026-03-19 19:13:31 | INFO | Screener | === Запуск Screener Phemex | Порог OI: 45.0% | Cooldown: 300с ===
-2026-03-19 19:13:31 | INFO | Screener | Запуск REST-воркера для обновления лимитов (интервал: 60с)
-2026-03-19 19:13:31 | INFO | Screener | Обновлены лимиты для 519 активных символов.
-2026-03-19 19:13:32 | INFO | Screener | Лимиты загружены. Запуск глобального WebSocket потока.
-2026-03-19 19:13:32 | INFO | Screener | Глобальное WS соединение установлено. Запрашиваем поток всего рынка...
-2026-03-19 19:13:37 | INFO | Screener | Скринер остановлен.
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] DEGOUSDT | usage=138.85% | current_oi=923342.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] DIAUSDT | usage=2265.23% | current_oi=5549817.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] DOGEUSDT | usage=6656.24% | current_oi=372749531.095 | limit=5600000.0 | threshold=95.00% | source=leverageMargins[1005].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] DOODUSDT | usage=150537.33% | current_oi=368816455.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] DRIFTUSDT | usage=888.13% | current_oi=5906088.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] DUSDT | usage=12952.00% | current_oi=86130820.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] DUSKUSDT | usage=8932.99% | current_oi=45111582.0 | limit=505000.0 | threshold=95.00% | source=leverageMargins[1013].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] DYDXUSDT | usage=230.84% | current_oi=12927308.9825 | limit=5600000.0 | threshold=95.00% | source=leverageMargins[1005].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] DYMUSDT | usage=3181.95% | current_oi=21159957.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] EDENUSDT | usage=9442.02% | current_oi=23132947.62 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] EDUUSDT | usage=1267.10% | current_oi=8426210.5 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] EIGENUSDT | usage=3721.44% | current_oi=24747595.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ELSAUSDT | usage=352.42% | current_oi=7048393.71 | limit=2000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ENAUSDT | usage=2351.63% | current_oi=15638369.5 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ENJUSDT | usage=41231.42% | current_oi=67001051.0 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1009].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ENSOUSDT | usage=277.07% | current_oi=2770658.71 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] EPICUSDT | usage=454.05% | current_oi=3019425.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ERAUSDT | usage=3612.93% | current_oi=8851678.2 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ESPORTSUSDT | usage=381.92% | current_oi=3819219.0 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ESPUSDT | usage=1056.33% | current_oi=21126539.35 | limit=2000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ETHFIUSDT | usage=281.62% | current_oi=1872791.6640625 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] EULUSDT | usage=162.81% | current_oi=1628053.52 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] EVAAUSDT | usage=219.34% | current_oi=2193392.1 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] FARTCOINUSDT | usage=4575.59% | current_oi=30427659.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] FETUSDT | usage=2287.43% | current_oi=15211401.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] FFUSDT | usage=7903.03% | current_oi=19362417.2 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] FHEUSDT | usage=1146.26% | current_oi=57313028.01 | limit=5000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] FIDAUSDT | usage=12477.48% | current_oi=82975215.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] FIGHTUSDT | usage=3501.91% | current_oi=35019149.13 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] FIOUSDT | usage=81084.56% | current_oi=243253680.0 | limit=300000.0 | threshold=95.00% | source=leverageMargins[1022].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] FLOWUSDT | usage=5308.23% | current_oi=35299741.85 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] FLUIDUSDT | usage=252.00% | current_oi=617389.1 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] FLUXUSDT | usage=2581.97% | current_oi=17170123.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] FOGOUSDT | usage=508.81% | current_oi=25440658.18 | limit=5000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] FORMUSDT | usage=449.04% | current_oi=2986111.9 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] FUSDT | usage=121898.06% | current_oi=298650253.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] GALAUSDT | usage=4943.04% | current_oi=276810237.5 | limit=5600000.0 | threshold=95.00% | source=leverageMargins[1005].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] GASUSDT | usage=257.15% | current_oi=1710080.3 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] GLMUSDT | usage=1249.48% | current_oi=8309043.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] GMTUSDT | usage=41721.04% | current_oi=277444945.11 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] GMXUSDT | usage=129.58% | current_oi=210565.57 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1009].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] GOATUSDT | usage=9029.02% | current_oi=60042965.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] GPSUSDT | usage=29574.75% | current_oi=196672063.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] GRASSUSDT | usage=7347.29% | current_oi=11939345.0 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1009].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] GRIFFAINUSDT | usage=11668.95% | current_oi=77598548.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] GRTUSDT | usage=4576.67% | current_oi=30434851.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] GUAUSDT | usage=1024.44% | current_oi=10244367.85 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] GUNUSDT | usage=6696.47% | current_oi=44531544.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] GWEIUSDT | usage=904.62% | current_oi=18092424.23 | limit=2000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] HAEDALUSDT | usage=15289.02% | current_oi=37458091.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] HANAUSDT | usage=4528.28% | current_oi=45282821.2 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] HBARUSDT | usage=1921.03% | current_oi=23532565.3125 | limit=1225000.0 | threshold=95.00% | source=leverageMargins[1016].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] HEIUSDT | usage=1176.93% | current_oi=7826584.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] HEMIUSDT | usage=61149.58% | current_oi=149816461.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] HFTUSDT | usage=35057.38% | current_oi=56968244.0 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1009].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] HIGHUSDT | usage=3175.39% | current_oi=5160011.5 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1009].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] HIPPOUSDT | usage=203862.19% | current_oi=499462357.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1032].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] HMSTRUSDT | usage=1939509.98% | current_oi=12897741344.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] HOLOUSDT | usage=6830.44% | current_oi=16734584.5 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] HOMEUSDT | usage=9182.05% | current_oi=91820487.0 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] HOOKUSDT | usage=4320.82% | current_oi=28733446.37 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] HUMAUSDT | usage=67879.54% | current_oi=166304875.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] HUSDT | usage=8258.55% | current_oi=20233446.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] HYPERUSDT | usage=9597.23% | current_oi=23513202.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ICNTUSDT | usage=2730.54% | current_oi=6689811.5 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ICXUSDT | usage=18412.46% | current_oi=45110529.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] IDOLUSDT | usage=22205.41% | current_oi=54403253.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] IDUSDT | usage=2657.36% | current_oi=17671440.500005 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] IMXUSDT | usage=3157.21% | current_oi=5130465.5 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1010].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] INITUSDT | usage=4177.99% | current_oi=10236064.7 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] INUSDT | usage=6956.49% | current_oi=17043396.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] INXUSDT | usage=1818.60% | current_oi=18186005.7 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] IOSTUSDT | usage=689499.39% | current_oi=627444449.0 | limit=91000.0 | threshold=95.00% | source=leverageMargins[1031].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] IOTXUSDT | usage=26397.70% | current_oi=175544721.95 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] IOUSDT | usage=1411.27% | current_oi=9384942.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] IPUSDT | usage=365.06% | current_oi=2427657.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] IRYSUSDT | usage=5191.27% | current_oi=51912744.03 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] JASMYUSDT | usage=41293.17% | current_oi=274599582.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] JCTUSDT | usage=85199.17% | current_oi=851991726.97 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] JELLYJELLYUSDT | usage=11784.26% | current_oi=28871436.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1032].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] JSTUSDT | usage=9488.87% | current_oi=23247725.5 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] JTOUSDT | usage=366.25% | current_oi=2435550.59 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] JUPUSDT | usage=1933.18% | current_oi=12855632.375 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] KAIAUSDT | usage=2089.03% | current_oi=13892038.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] KAITOUSDT | usage=294.55% | current_oi=2665718.0 | limit=905000.0 | threshold=95.00% | source=leverageMargins[1018].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] KASUSDT | usage=5197.03% | current_oi=34560273.78 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] KATUSDT | usage=1062.24% | current_oi=21244803.0 | limit=2000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] KAVAUSDT | usage=13585.75% | current_oi=22076847.95 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1009].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] KERNELUSDT | usage=12891.44% | current_oi=31584017.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] KGENUSDT | usage=3213.08% | current_oi=7872056.62 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] KITEUSDT | usage=296.09% | current_oi=14804594.6 | limit=5000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] KMNOUSDT | usage=5256.35% | current_oi=34954711.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] KNCUSDT | usage=3957.88% | current_oi=6431547.5 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1009].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] KSMUSDT | usage=228.52% | current_oi=559880.8 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] LABUSDT | usage=273.21% | current_oi=13660698.45 | limit=5000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] LAUSDT | usage=1400.98% | current_oi=14009807.4 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] LAYERUSDT | usage=985.15% | current_oi=6551270.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] LDOUSDT | usage=369.23% | current_oi=2455379.75 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] LIGHTUSDT | usage=3392.39% | current_oi=8311350.06 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] LINEAUSDT | usage=108859.35% | current_oi=266705407.9 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] LISTAUSDT | usage=4425.54% | current_oi=7191507.0 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1009].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] LPTUSDT | usage=253.38% | current_oi=1279559.25 | limit=505000.0 | threshold=95.00% | source=leverageMargins[1013].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] LQTYUSDT | usage=402.50% | current_oi=2676592.05 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] LRCUSDT | usage=10102.19% | current_oi=16416063.0 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1009].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] LSKUSDT | usage=1711.40% | current_oi=17113978.0 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] LUNA2USDT | usage=3090.49% | current_oi=20551747.5 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] LUNCUSDT | usage=632050.35% | current_oi=35394819562.975 | limit=5600000.0 | threshold=95.00% | source=leverageMargins[1005].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] LYNUSDT | usage=3552.83% | current_oi=17764174.12 | limit=500000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MAGICUSDT | usage=13101.45% | current_oi=39304357.725 | limit=300000.0 | threshold=95.00% | source=leverageMargins[1022].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MAGMAUSDT | usage=624.06% | current_oi=6240606.04 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MANAUSDT | usage=220.81% | current_oi=12365521.5 | limit=5600000.0 | threshold=95.00% | source=leverageMargins[1005].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MANTAUSDT | usage=8592.29% | current_oi=13962465.77 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1010].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MASKUSDT | usage=212.42% | current_oi=1412603.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MAVIAUSDT | usage=3009.53% | current_oi=20013369.3 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MAVUSDT | usage=21512.20% | current_oi=143056113.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MBOXUSDT | usage=21064.59% | current_oi=140079503.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MELANIAUSDT | usage=1890.85% | current_oi=4632594.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MEMEUSDT | usage=146498.38% | current_oi=974214244.91 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MERLUSDT | usage=7658.41% | current_oi=18763105.65 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1032].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] METISUSDT | usage=127.78% | current_oi=207635.14 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1010].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] METUSDT | usage=3299.67% | current_oi=8084181.2 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MEUSDT | usage=3115.78% | current_oi=20719955.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MEWUSDT | usage=161495.42% | current_oi=1073944572.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MINAUSDT | usage=2035.66% | current_oi=13537126.776 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MIRAUSDT | usage=5285.78% | current_oi=12950168.63 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MITOUSDT | usage=10487.25% | current_oi=25693751.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MMTUSDT | usage=117.61% | current_oi=5880684.52 | limit=5000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MOCAUSDT | usage=5615.09% | current_oi=37340378.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MONUSDT | usage=1568.20% | current_oi=78410248.0 | limit=5000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MOODENGUSDT | usage=7658.16% | current_oi=50926744.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MOVEUSDT | usage=29357.26% | current_oi=195225809.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MOVRUSDT | usage=296.20% | current_oi=481317.915 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1010].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MTLUSDT | usage=442.73% | current_oi=2944145.5 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MUBARAKUSDT | usage=9592.80% | current_oi=63792114.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] MYXUSDT | usage=755.91% | current_oi=1851970.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] NAORISUSDT | usage=16992.52% | current_oi=41631662.8 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] NEARUSDT | usage=241.34% | current_oi=1604894.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] NEIROUSDT | usage=5177650.56% | current_oi=34431376208.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] NEWTUSDT | usage=15503.18% | current_oi=37982780.8 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] NFPUSDT | usage=25444.16% | current_oi=41346759.96 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1010].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] NIGHTUSDT | usage=2364.27% | current_oi=35464112.08 | limit=1500000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] NILUSDT | usage=2905.44% | current_oi=19321175.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] NOMUSDT | usage=149627.74% | current_oi=366587969.8 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] NOTUSDT | usage=1119223.94% | current_oi=1818738909.5 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1010].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] NTRNUSDT | usage=9167.96% | current_oi=60966956.74 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] NXPCUSDT | usage=2848.49% | current_oi=6978811.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] OGNUSDT | usage=27514.40% | current_oi=25038100.0 | limit=91000.0 | threshold=95.00% | source=leverageMargins[1031].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ONDOUSDT | usage=1648.64% | current_oi=10963449.18 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ONEUSDT | usage=178992.67% | current_oi=290863088.5 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1009].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ONGUSDT | usage=1863.47% | current_oi=12392073.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ONTUSDT | usage=19099.15% | current_oi=31036124.1 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1009].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] OPENUSDT | usage=3996.44% | current_oi=9791268.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] OPUSDT | usage=359.23% | current_oi=20116681.1 | limit=5600000.0 | threshold=95.00% | source=leverageMargins[1005].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ORCAUSDT | usage=427.62% | current_oi=2843670.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] PARTIUSDT | usage=4256.73% | current_oi=28307268.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] PENDLEUSDT | usage=219.22% | current_oi=537097.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] PENGUUSDT | usage=44073.64% | current_oi=293089716.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] PEOPLEUSDT | usage=32058.83% | current_oi=213191206.75 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] PHAUSDT | usage=4424.73% | current_oi=29424482.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] PIEVERSEUSDT | usage=158.34% | current_oi=3166886.98 | limit=2000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] PIPPINUSDT | usage=154.86% | current_oi=23228344.0 | limit=15000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] PIXELUSDT | usage=19935.36% | current_oi=132570173.43 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] PLUMEUSDT | usage=11034.24% | current_oi=73377692.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] PNUTUSDT | usage=2292.44% | current_oi=15244732.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] POLUSDT | usage=8570.63% | current_oi=56994660.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] POLYXUSDT | usage=5758.97% | current_oi=29082799.0 | limit=505000.0 | threshold=95.00% | source=leverageMargins[1013].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] POPCATUSDT | usage=6316.74% | current_oi=42006296.125 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] PORTALUSDT | usage=12615.10% | current_oi=83890439.5 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] POWRUSDT | usage=1810.09% | current_oi=12037091.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] PROMPTUSDT | usage=5133.08% | current_oi=12576048.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] PROMUSDT | usage=123.48% | current_oi=302523.5 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1032].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] PROVEUSDT | usage=1465.91% | current_oi=3591487.1 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] PTBUSDT | usage=302631.69% | current_oi=741447652.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] PTUSDT | usage=594.71% | current_oi=3568285.0 | limit=600000.0 | threshold=95.00% | source=leverageMargins[1003].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] PUMPBTCUSDT | usage=21080.74% | current_oi=51647814.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] PUMPUSDT | usage=466906.33% | current_oi=1143920520.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] PUNDIXUSDT | usage=1814.97% | current_oi=4446683.2 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] PYTHUSDT | usage=2172.24% | current_oi=14445420.24 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] QTUMUSDT | usage=159.50% | current_oi=1060653.7 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] QUSDT | usage=42992.59% | current_oi=105331854.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] RAREUSDT | usage=7748.84% | current_oi=51529810.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] RAVEUSDT | usage=121.62% | current_oi=6081048.46 | limit=5000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] RDNTUSDT | usage=52109.18% | current_oi=127667503.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] RECALLUSDT | usage=9216.68% | current_oi=22580869.39 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] REDUSDT | usage=1299.05% | current_oi=8638685.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] RENDERUSDT | usage=135.22% | current_oi=899230.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] RESOLVUSDT | usage=16319.30% | current_oi=39982280.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] REZUSDT | usage=88830.04% | current_oi=590719733.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] RLCUSDT | usage=727.05% | current_oi=1781281.9 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] RLSUSDT | usage=23877.89% | current_oi=238778949.4 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ROBOUSDT | usage=836.76% | current_oi=16735241.16 | limit=2000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] RONUSDT | usage=1917.83% | current_oi=12753571.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ROSEUSDT | usage=27008.82% | current_oi=66171619.5 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1032].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] RPLUSDT | usage=139.97% | current_oi=342938.29 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1032].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] RSRUSDT | usage=310221.52% | current_oi=504109972.25 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1009].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] RUNEUSDT | usage=597.72% | current_oi=3974841.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] RVNUSDT | usage=44292.29% | current_oi=294543706.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SAFEUSDT | usage=2954.69% | current_oi=19648681.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SAGAUSDT | usage=3499.21% | current_oi=23269779.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SAHARAUSDT | usage=89514.05% | current_oi=219309415.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SANDUSDT | usage=170.27% | current_oi=9535060.5 | limit=5600000.0 | threshold=95.00% | source=leverageMargins[1005].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SANTOSUSDT | usage=323.87% | current_oi=2153713.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SAPIENUSDT | usage=3931.03% | current_oi=9631031.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SCRTUSDT | usage=1295.25% | current_oi=8613389.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SCRUSDT | usage=5333.78% | current_oi=35469640.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SEIUSDT | usage=5358.56% | current_oi=35634428.5 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SENTUSDT | usage=1925.58% | current_oi=96279200.7 | limit=5000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SFPUSDT | usage=3253.79% | current_oi=2960947.0 | limit=91000.0 | threshold=95.00% | source=leverageMargins[1031].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SHELLUSDT | usage=3654.72% | current_oi=24303874.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SIGNUSDT | usage=20367.27% | current_oi=49899823.3 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SIRENUSDT | usage=2120.08% | current_oi=14098531.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SKLUSDT | usage=194566.58% | current_oi=316170684.5 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1009].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SKRUSDT | usage=5874.13% | current_oi=58741251.38 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SKYUSDT | usage=9412.75% | current_oi=23061244.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SNXUSDT | usage=2119.86% | current_oi=3444765.2 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1010].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SOLVUSDT | usage=17313.66% | current_oi=115135858.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SOMIUSDT | usage=2683.02% | current_oi=6573393.1 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SONICUSDT | usage=7620.09% | current_oi=50673586.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SOONUSDT | usage=1787.94% | current_oi=4380455.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SOPHUSDT | usage=82646.86% | current_oi=202484810.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SPACEUSDT | usage=13995.79% | current_oi=279915836.68 | limit=2000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SPELLUSDT | usage=2254121.14% | current_oi=3662946854.5 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1009].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SPKUSDT | usage=35227.74% | current_oi=86307961.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SPORTFUNUSDT | usage=3492.94% | current_oi=34929356.61 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SPXUSDT | usage=902.54% | current_oi=6001873.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SQDUSDT | usage=16785.34% | current_oi=41124085.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] STABLEUSDT | usage=1043.94% | current_oi=52197031.8 | limit=5000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] STBLUSDT | usage=23245.01% | current_oi=56950279.5 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] STEEMUSDT | usage=10701.15% | current_oi=17389374.5 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1009].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] STGUSDT | usage=1268.45% | current_oi=8435161.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] STORJUSDT | usage=1150.86% | current_oi=7653239.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1014].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] STOUSDT | usage=6009.43% | current_oi=9765323.0 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1009].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] STRKUSDT | usage=2156.52% | current_oi=14340836.5 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] STXUSDT | usage=508.58% | current_oi=3382076.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SUIUSDT | usage=386.92% | current_oi=4739709.0 | limit=1225000.0 | threshold=95.00% | source=leverageMargins[1016].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SUNUSDT | usage=8124.13% | current_oi=54025441.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SUPERUSDT | usage=2812.09% | current_oi=18700377.8591 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SUSDT | usage=1898.08% | current_oi=12622207.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SUSHIUSDT | usage=568.87% | current_oi=3783006.5 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SWARMSUSDT | usage=14704.16% | current_oi=97782673.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SXTUSDT | usage=18674.27% | current_oi=45751957.6 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SYNUSDT | usage=2507.05% | current_oi=16671868.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SYRUPUSDT | usage=1353.74% | current_oi=3316656.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] SYSUSDT | usage=7614.98% | current_oi=50639603.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TACUSDT | usage=124999.98% | current_oi=306249959.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TAIKOUSDT | usage=3953.86% | current_oi=9686964.3 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TAKEUSDT | usage=22799.98% | current_oi=55859962.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TAUSDT | usage=18275.43% | current_oi=44774797.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] THETAUSDT | usage=1219.81% | current_oi=8111746.1 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] THEUSDT | usage=834.10% | current_oi=5546732.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TIAUSDT | usage=452.00% | current_oi=3005814.255 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TLMUSDT | usage=152662.64% | current_oi=374023475.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TNSRUSDT | usage=2939.99% | current_oi=19550916.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TONUSDT | usage=233.19% | current_oi=2110338.5 | limit=905000.0 | threshold=95.00% | source=leverageMargins[1018].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TOSHIUSDT | usage=2869976.14% | current_oi=7031441539.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TOWNSUSDT | usage=138587.59% | current_oi=339539592.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TRADOORUSDT | usage=104.26% | current_oi=1042629.54 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TREEUSDT | usage=8131.11% | current_oi=19921207.9 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TRIAUSDT | usage=506.93% | current_oi=10138517.68 | limit=2000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TROLLUSDT | usage=1201.21% | current_oi=36036200.0 | limit=3000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TRUSTUSDT | usage=1696.34% | current_oi=16963410.2 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TRUTHUSDT | usage=10954.51% | current_oi=109545125.03 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TRUUSDT | usage=75717.68% | current_oi=123041231.5 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1009].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TRXUSDT | usage=269.01% | current_oi=15064606.675 | limit=5600000.0 | threshold=95.00% | source=leverageMargins[1005].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TSTUSDT | usage=12621.59% | current_oi=83933595.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TURBOUSDT | usage=161065.69% | current_oi=1071086852.5 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TURTLEUSDT | usage=1282.26% | current_oi=25645267.09 | limit=2000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TUSDT | usage=230063.88% | current_oi=209358135.0 | limit=91000.0 | threshold=95.00% | source=leverageMargins[1031].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TUTUSDT | usage=24458.78% | current_oi=73376353.0 | limit=300000.0 | threshold=95.00% | source=leverageMargins[1022].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] TWTUSDT | usage=220.58% | current_oi=1466877.29 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] UAIUSDT | usage=107.07% | current_oi=5353442.8 | limit=5000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] UBUSDT | usage=21023.08% | current_oi=51506536.5 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] UMAUSDT | usage=850.99% | current_oi=5659093.77 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] USELESSUSDT | usage=5301.92% | current_oi=12989700.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] USTCUSDT | usage=15388.62% | current_oi=102334335.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] USUALUSDT | usage=20472.41% | current_oi=136141510.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] USUSDT | usage=6053.86% | current_oi=302692982.36 | limit=5000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] VANRYUSDT | usage=26838.29% | current_oi=268382881.25 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] VELODROMEUSDT | usage=6187.98% | current_oi=41150100.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] VETUSDT | usage=8002.16% | current_oi=448120736.5 | limit=5600000.0 | threshold=95.00% | source=leverageMargins[1005].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] VINEUSDT | usage=16718.91% | current_oi=40961329.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1032].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] VIRTUALUSDT | usage=230.80% | current_oi=1534821.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] VVVUSDT | usage=188.32% | current_oi=1252331.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] WALUSDT | usage=8899.75% | current_oi=21804396.5 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1032].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] WAXPUSDT | usage=63118.88% | current_oi=318750368.0 | limit=505000.0 | threshold=95.00% | source=leverageMargins[1013].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] WCTUSDT | usage=16531.72% | current_oi=40502707.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] WETUSDT | usage=307.45% | current_oi=15372301.87 | limit=5000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] WHITEWHALEUSDT | usage=542.37% | current_oi=27118471.15 | limit=5000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] WIFUSDT | usage=1357.43% | current_oi=9026880.4517267 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] WLDUSDT | usage=634.75% | current_oi=4221110.5 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] WLFIUSDT | usage=4797.43% | current_oi=24226998.4 | limit=505000.0 | threshold=95.00% | source=leverageMargins[1013].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] WOOUSDT | usage=18755.91% | current_oi=45951974.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1032].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] WUSDT | usage=6973.56% | current_oi=46374165.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] XAIUSDT | usage=9662.69% | current_oi=64256894.12 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] XANUSDT | usage=79573.33% | current_oi=194954665.19 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] XLMUSDT | usage=6457.14% | current_oi=42939950.53 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] XNYUSDT | usage=135281.20% | current_oi=331438929.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] XPINUSDT | usage=483785.94% | current_oi=1185275561.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] XPLUSDT | usage=3249.29% | current_oi=16408908.5 | limit=505000.0 | threshold=95.00% | source=leverageMargins[1013].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] XRPUSDT | usage=736.56% | current_oi=41247183.9219 | limit=5600000.0 | threshold=95.00% | source=leverageMargins[1005].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] XTZUSDT | usage=101.27% | current_oi=5671271.6 | limit=5600000.0 | threshold=95.00% | source=leverageMargins[1005].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] XVGUSDT | usage=98287.63% | current_oi=159717405.0 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1010].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] XVSUSDT | usage=244.05% | current_oi=222087.0 | limit=91000.0 | threshold=95.00% | source=leverageMargins[1031].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] YBUSDT | usage=3366.18% | current_oi=8247139.09 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] YGGUSDT | usage=11929.09% | current_oi=19384771.25 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1010].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ZAMAUSDT | usage=943.59% | current_oi=18871887.98 | limit=2000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ZBTUSDT | usage=1696.96% | current_oi=16969576.52 | limit=1000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ZEREBROUSDT | usage=11494.24% | current_oi=76436677.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ZETAUSDT | usage=2849.07% | current_oi=18946298.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ZILUSDT | usage=124607.51% | current_oi=202487199.0 | limit=162500.0 | threshold=95.00% | source=leverageMargins[1009].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ZKCUSDT | usage=7970.51% | current_oi=19527755.01 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ZKPUSDT | usage=396.62% | current_oi=19830967.52 | limit=5000000.0 | threshold=95.00% | source=product.maxOI
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ZKUSDT | usage=11580.97% | current_oi=77013460.0 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ZORAUSDT | usage=35224.93% | current_oi=86301073.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ZROUSDT | usage=146.08% | current_oi=971433.6 | limit=665000.0 | threshold=95.00% | source=leverageMargins[1015].items[-1].notionalValueRv
+2026-03-19 20:01:34 | WARNING | OIScreener | 🚨 [LIMIT EXCEEDED] ZRXUSDT | usage=4023.76% | current_oi=9858220.0 | limit=245000.0 | threshold=95.00% | source=leverageMargins[1012].items[-1].notionalValueRv
+2026-03-19 20:01:34 | INFO | OIScreener | Обработан websocket-пакет: rows=584, matched=508, signals=417
+2026-03-19 20:01:35 | INFO | OIScreener | Обработан websocket-пакет: rows=304, matched=0, signals=0
+2026-03-19 20:01:38 | INFO | OIScreener | Обработан websocket-пакет: rows=305, matched=0, signals=0
+2026-03-19 20:01:38 | INFO | OIScreener | Скринер остановлен вручную.
