@@ -1,6 +1,6 @@
 {
-    "api_url": "https://api.phemex.com",
     "check_interval": 60,
-    "oi_threshold_percent": 95.0,
+    "oi_spike_threshold_percent": 3.0,
+    "window_size_ticks": 5,
     "signal_cooldown_sec": 300
 }
