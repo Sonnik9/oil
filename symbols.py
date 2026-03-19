@@ -18,6 +18,7 @@ class SymbolInfo:
     symbol: str
     status: str
     quote: str
+    raw_data: Dict[str, Any]  # Добавлено для доступа к лимитам в main.py
 
 
 class PhemexSymbols:
@@ -25,12 +26,6 @@ class PhemexSymbols:
 
     Uses:
         GET https://api.phemex.com/public/products
-
-    Important:
-        Phemex "spot" symbols often have prefix 's' (e.g. sBTCUSDT).
-        Here we return ONLY USDT perpetual contract symbols like BTCUSDT.
-
-    Uses a shared aiohttp.ClientSession.
     """
 
     BASE_URL = "https://api.phemex.com"
@@ -110,8 +105,7 @@ class PhemexSymbols:
             return None
 
         status = str(obj.get("status") or obj.get("state") or obj.get("symbolStatus") or "Listed")
-        # print(status)
-        return SymbolInfo(symbol=sym_s.upper(), status=status, quote=q)
+        return SymbolInfo(symbol=sym_s.upper(), status=status, quote=q, raw_data=obj)
 
     async def get_all(self, quote: str = "USDT", only_active: bool = True) -> List[SymbolInfo]:
         data = await self._get_json("/public/products")
@@ -145,18 +139,3 @@ class PhemexSymbols:
                 seen.add(s.symbol)
                 uniq.append(s)
         return uniq
-
-
-# ----------------------------
-# SELF TEST
-# ----------------------------
-if __name__ == "__main__":
-    async def _main():
-        api = PhemexSymbols()
-        rows = await api.get_all()
-        print(f"Symbols: {len(rows)}")
-        for r in rows[:20]:
-            print(r)
-        await api.aclose()
-
-    asyncio.run(_main())
