@@ -1,6 +1,5 @@
 {
     "check_interval": 60,
-    "oi_spike_threshold_percent": 3.0,
-    "window_size_ticks": 5,
+    "oi_spike_threshold_percent": 50.0,
     "signal_cooldown_sec": 300
 }

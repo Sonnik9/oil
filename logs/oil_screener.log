@@ -1,1 +1,27 @@
 2026-03-19 21:06:53 | INFO | Screener | Скринер остановлен.
+2026-03-19 21:43:13 | ERROR | Screener | Ошибка загрузки kucoin_raw_contracts: [Errno 2] No such file or directory: 'kucoin_raw_contracts.json'
+2026-03-19 21:43:13 | INFO | Screener | === Запуск VIBE-Скринера v3 | ЧИСТАЯ МАТЕМАТИКА | Базовые монеты ===
+2026-03-19 21:43:13 | INFO | Screener | Порог аномалии: 10000.0% от лимита старшего брата
+2026-03-19 21:43:13 | INFO | Screener | Опрос Phemex завершен (тикеров: 530). Сигналов: 0. Сплю...
+2026-03-19 21:44:14 | INFO | Screener | Опрос Phemex завершен (тикеров: 530). Сигналов: 0. Сплю...
+2026-03-19 21:44:53 | INFO | Screener | Скринер остановлен.
+2026-03-19 21:44:57 | ERROR | Screener | Ошибка загрузки kucoin_raw_contracts: [Errno 2] No such file or directory: 'kucoin_raw_contracts.json'
+2026-03-19 21:44:57 | INFO | Screener | === Запуск VIBE-Скринера v3 | ЧИСТАЯ МАТЕМАТИКА | Базовые монеты ===
+2026-03-19 21:44:57 | INFO | Screener | Порог аномалии: 1000.0% от лимита старшего брата
+2026-03-19 21:44:58 | INFO | Screener | Опрос Phemex завершен (тикеров: 530). Сигналов: 0. Сплю...
+2026-03-19 21:45:58 | INFO | Screener | Скринер остановлен.
+2026-03-19 21:46:30 | ERROR | Screener | Ошибка метаданных KuCoin: [Errno 2] No such file or directory: 'kucoin_raw_contracts.json'
+2026-03-19 21:46:30 | INFO | Screener | === OIL-Скринер запущен | Порог: 80.0% утилизации лимита ===
+2026-03-19 21:47:05 | ERROR | Screener | Ошибка метаданных KuCoin: [Errno 2] No such file or directory: 'kucoin_raw_contracts.json'
+2026-03-19 21:47:05 | INFO | Screener | === OIL-Скринер запущен | Порог: 50.0% утилизации лимита ===
+2026-03-19 21:49:54 | INFO | Screener | Обновляю справочник лимитов KuCoin...
+2026-03-19 21:49:55 | INFO | Screener | Справочник KuCoin обновлен.
+2026-03-19 21:49:55 | INFO | Screener | Загружено лимитов KuCoin: 557
+2026-03-19 21:49:55 | INFO | Screener | === OIL-Скринер v4 запущен | Порог: 50.0% ===
+2026-03-19 21:50:57 | INFO | Screener | Скринер остановлен пользователем.
+2026-03-19 22:14:59 | INFO | Screener | Загружено лимитов KuCoin: 557
+2026-03-19 22:14:59 | INFO | Screener | === OIL-Скринер v5 | Порог: 50.0% ===
+2026-03-19 22:15:45 | INFO | Screener | Скринер остановлен.
+2026-03-19 22:15:48 | INFO | Screener | Загружено лимитов KuCoin: 557
+2026-03-19 22:15:48 | INFO | Screener | === OIL-Скринер v5 | Порог: 50.0% ===
+2026-03-19 22:16:16 | INFO | Screener | Скринер остановлен.
