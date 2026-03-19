@@ -1,33 +1,35 @@
 import asyncio
 import time
 import json
+import re
 from typing import Any, Dict, Optional
-from collections import deque
 import aiohttp
 
 from c_log import UnifiedLogger
+from symbols import PhemexSymbols
 
-logger = UnifiedLogger("delta_screener", context="Screener")
+logger = UnifiedLogger("oil_screener", context="Screener")
 
-class PhemexDeltaScreener:
+class PhemexOILScreener:
     BASE_URL = "https://api.phemex.com"
 
     def __init__(self, config_path='config.json'):
         with open(config_path, 'r', encoding='utf-8') as f:
             self.config = json.load(f)
             
+        # Порог аномалии. Поставь в конфиге адекватное значение, например 300.0 или 500.0
+        self.fill_threshold = float(self.config.get("oi_spike_threshold_percent", 500.0))
+            
         self.check_interval = self.config.get("check_interval", 60)
-        self.spike_threshold = float(self.config.get("oi_spike_threshold_percent", 3.0))
-        self.cooldown_sec = self.config.get("signal_cooldown_sec", 300)
-        self.window_size = int(self.config.get("window_size_ticks", 5))
-        
-        # Хранилище за историята на ОИ: символ -> deque (опашка с фиксиран размер)
-        self.oi_history: Dict[str, deque] = {}
+        self.signal_cooldown_sec = self.config.get("signal_cooldown_sec", 300)
         self.signal_cache: Dict[str, float] = {}
         
         self._timeout = aiohttp.ClientTimeout(total=20.0)
-        self._session: aiohttp.ClientSession | None = None
+        self._session: Optional[aiohttp.ClientSession] = None
         self._session_lock = asyncio.Lock()
+        
+        self.phemex_contract_sizes: Dict[str, float] = {}
+        self.kucoin_base_limits: Dict[str, float] = {}
 
     async def _get_session(self) -> aiohttp.ClientSession:
         if self._session is not None and not self._session.closed:
@@ -41,7 +43,7 @@ class PhemexDeltaScreener:
 
     async def _get_json(self, path: str, params: Optional[dict] = None) -> Any:
         url = f"{self.BASE_URL}{path}"
-        last_err: Exception | None = None
+        last_err: Optional[Exception] = None
         for attempt in range(1, 4):
             try:
                 session = await self._get_session()
@@ -59,12 +61,68 @@ class PhemexDeltaScreener:
 
     def _cleanup_cache(self):
         now = time.time()
-        expired = [sym for sym, ts in self.signal_cache.items() if now - ts >= self.cooldown_sec]
+        expired = [sym for sym, ts in self.signal_cache.items() if now - ts >= self.signal_cooldown_sec]
         for sym in expired:
             del self.signal_cache[sym]
 
+    async def load_metadata(self):
+        # 1. Тянем размеры контрактов Phemex
+        try:
+            ph_sym = PhemexSymbols()
+            symbols = await ph_sym.get_all()
+            for s in symbols:
+                c_size_str = str(s.raw_data.get("contractSize", "1"))
+                match = re.search(r"[\d\.]+", c_size_str)
+                if match:
+                    self.phemex_contract_sizes[s.symbol] = float(match.group())
+                else:
+                    self.phemex_contract_sizes[s.symbol] = 1.0
+            await ph_sym.aclose()
+        except Exception as e:
+            logger.error(f"Ошибка загрузки символов Phemex: {e}")
+
+        # 2. Высчитываем лимиты KuCoin в БАЗОВЫХ МОНЕТАХ раз и навсегда напрямую из RAW
+        try:
+            with open('kucoin_raw_contracts.json', 'r', encoding='utf-8') as f:
+                kucoin_raw = json.load(f)
+                
+            items = kucoin_raw.get("data", []) if isinstance(kucoin_raw, dict) and "data" in kucoin_raw else kucoin_raw
+            if isinstance(items, dict):
+                items = items.values()
+                
+            loaded = 0
+            for item in items:
+                if not isinstance(item, dict): continue
+                sym = item.get("symbol", "")
+                base = sym.replace("USDTM", "").replace("USDT", "")
+                if base == "XBT": base = "BTC"
+                
+                limit_contracts = float(item.get("maxRiskLimit", 0.0))
+                mult = float(item.get("multiplier", 1.0))
+                
+                # Лимит в чистых монетах (например, 250 BTC)
+                limit_base_coins = limit_contracts * mult
+                if limit_base_coins > 0:
+                    self.kucoin_base_limits[base] = limit_base_coins
+                    loaded += 1
+            logger.info(f"Загружены лимиты KuCoin (в базовых монетах): {loaded} шт.")
+        except Exception as e:
+            logger.error(f"Ошибка загрузки kucoin_raw_contracts: {e}")
+
+    def get_kucoin_limit(self, symbol: str) -> float:
+        base_sym = symbol.replace("USDT", "")
+        if base_sym in self.kucoin_base_limits:
+            return self.kucoin_base_limits[base_sym]
+        # Откусываем префиксы щитков, если они есть
+        clean = re.sub(r'^(U|u)?(1000000|10000|1000|100|1M|1m)', '', base_sym)
+        if clean in self.kucoin_base_limits:
+            return self.kucoin_base_limits[clean]
+        return 0.0
+
     async def poll_tickers_loop(self):
-        logger.info(f"=== Запуск Делта-Скрийнер Phemex | Праг на скок: +{self.spike_threshold}% | Окно: {self.window_size} тика ===")
+        await self.load_metadata()
+        logger.info("=== Запуск VIBE-Скринера v3 | ЧИСТАЯ МАТЕМАТИКА | Базовые монеты ===")
+        logger.info(f"Порог аномалии: {self.fill_threshold}% от лимита старшего брата")
         
         while True:
             start_t = time.time()
@@ -76,60 +134,70 @@ class PhemexDeltaScreener:
                 found_signals = 0
                 for item in items:
                     sym = item.get("symbol")
-                    # Филтрираме само USDT фючърси
                     if not sym or not sym.endswith("USDT"):
                         continue
                         
-                    oi_str = item.get("openInterestRv") or item.get("openInterest") or 0
-                    current_oi = float(oi_str)
-                    
-                    if current_oi <= 0:
+                    # 1. Эталонный лимит Кукоина (в штуках монет)
+                    kucoin_limit_base_coins = self.get_kucoin_limit(sym)
+                    if kucoin_limit_base_coins <= 0:
                         continue
                         
-                    # Инициализираме историята за нови монети
-                    if sym not in self.oi_history:
-                        self.oi_history[sym] = deque(maxlen=self.window_size)
-                        
-                    history = self.oi_history[sym]
+                    # Больше не доверяем openInterestRv, берем сырые контракты!
+                    oi_contracts_str = item.get("openInterest")
+                    price_str = item.get("markPriceRp")
                     
-                    # Ако вече имаме натрупана история (поне 1 стар запис)
-                    if len(history) > 0:
-                        # Взимаме най-старото налично ОИ в нашия прозорец
-                        old_oi = history[0]
+                    if not oi_contracts_str or not price_str:
+                        continue
                         
-                        if old_oi > 0:
-                            delta_percent = ((current_oi - old_oi) / old_oi) * 100.0
+                    current_oi_contracts = float(oi_contracts_str)
+                    
+                    # 2. ОИ Фемекса (в штуках монет)
+                    ph_contract_size = self.phemex_contract_sizes.get(sym, 1.0)
+                    phemex_oi_base_coins = current_oi_contracts * ph_contract_size
+                    
+                    if phemex_oi_base_coins <= 0: continue
+                    
+                    # 3. Идеальная метрика: Монеты делим на Монеты (цена вообще не участвует в логике)
+                    fill_ratio = (phemex_oi_base_coins / kucoin_limit_base_coins) * 100.0
+                    
+                    if fill_ratio >= self.fill_threshold:
+                        # Доллары считаем только для красоты в логе.
+                        # Внимание: у Фемекса цена в API умножена на 10000, поэтому делим обратно.
+                        current_price = float(price_str) / 10000.0
+                        phemex_usdt = phemex_oi_base_coins * current_price
+                        kucoin_usdt = kucoin_limit_base_coins * current_price
+                        
+                        self._trigger_signal(sym, phemex_usdt, kucoin_usdt, fill_ratio)
+                        found_signals += 1
                             
-                            # Проверяваме за рязък скок
-                            if delta_percent >= self.spike_threshold:
-                                self._trigger_signal(sym, current_oi, old_oi, delta_percent)
-                                found_signals += 1
-                                
-                    # Добавяме текущата стойност към прозореца
-                    history.append(current_oi)
-                            
-                logger.info(f"Опрос Phemex завършен (тикове: {len(items)}). Сигнали: {found_signals}. Спя...")
+                logger.info(f"Опрос Phemex завершен (тикеров: {len(items)}). Сигналов: {found_signals}. Сплю...")
                 
             except Exception as e:
-                logger.error(f"Грешка при масов опрос: {e}")
+                logger.error(f"Ошибка при опросе: {e}")
                 
             elapsed = time.time() - start_t
             sleep_time = max(1.0, self.check_interval - elapsed)
             await asyncio.sleep(sleep_time)
 
-    def _trigger_signal(self, symbol: str, current_oi: float, old_oi: float, delta: float):
+    def _trigger_signal(self, symbol: str, phemex_usdt: float, kucoin_usdt: float, ratio: float):
         self._cleanup_cache()
         now = time.time()
         if symbol not in self.signal_cache:
-            logger.warning(f"🚀 [ВСПЛЕСК ОИ] {symbol} | Скок: +{delta:.2f}% | Беше: {old_oi:.0f} -> Сега: {current_oi:.0f}")
+            logger.warning(f"🚨 [ПЕРЕГРУЗ ОИ] {symbol} | Phemex: ${phemex_usdt:,.0f} | KuCoin Limit: ${kucoin_usdt:,.0f} | Заполнение: {ratio:.1f}%")
             self.signal_cache[symbol] = now
 
     async def run(self):
-        await self.poll_tickers_loop()
+        try:
+            await self.poll_tickers_loop()
+        finally:
+            # Корректно закрываем сессию aiohttp, чтобы не было ругани при остановке
+            if self._session and not self._session.closed:
+                await self._session.close()
+            await asyncio.sleep(0.1)
 
 if __name__ == "__main__":
-    screener = PhemexDeltaScreener()
+    screener = PhemexOILScreener()
     try:
         asyncio.run(screener.run())
     except KeyboardInterrupt:
-        logger.info("Скрийнерът е спрян.")
+        logger.info("Скринер остановлен.")
